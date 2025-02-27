@@ -26,6 +26,9 @@ public class Player{
     public void sortAllCards(){} 
 
     public ArrayList<Integer> findRankingFrequency(){
+        for (int i = 0; i < allCards.size(); i++) {
+            if ()
+        }
         return new ArrayList<>(); 
     }
 
