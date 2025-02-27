@@ -29,9 +29,7 @@ public class Deck{
     }
 
     public  Card drawCard(){
-        for (int s = 0; s < 4; s++) {
-            
-        } 
+        int card = (Math.random() * 53); 
        return new Card("","");
     }
 
