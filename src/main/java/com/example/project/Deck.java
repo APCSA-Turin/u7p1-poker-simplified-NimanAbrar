@@ -6,7 +6,7 @@ public class Deck{
     private ArrayList<Card> cards;
 
     public Deck(){
-        cards = new ArrayList<>();
+        cards = new ArrayList<Card>();
         initializeDeck();
         shuffleDeck();
     }
@@ -29,12 +29,19 @@ public class Deck{
     }
 
     public  Card drawCard(){
-        int card = (Math.random() * 53); 
-       return new Card("","");
+        if (cards.size() ==0) {
+            return null;
+        }
+        return cards.remove(0);
     }
 
-    public  boolean isEmpty(){
-        return cards.isEmpty();
+    public boolean isEmpty(){
+        for (int i = 0; i < cards.size(); i++) {
+            if (cards.get(i) != null) {
+                return true;
+            }
+        }
+        return false;
     }
 
    
