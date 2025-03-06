@@ -8,7 +8,7 @@ public class Deck{
     public Deck(){
         cards = new ArrayList<Card>();
         initializeDeck();
-        shuffleDeck();
+        shuffleDeck(); //shuffle deck for randomness
     }
 
     public ArrayList<Card> getCards(){
@@ -16,9 +16,9 @@ public class Deck{
     }
 
     public  void initializeDeck(){ //hint.. use the utility class
-        for (int s = 0; s < 4; s++) {
-            for (int r = 0; r < 13; r++) {
-                Card newCard = new Card(Utility.getRanks()[r], Utility.getSuits()[s]); 
+        for (int s = 0; s < 4; s++) { //iterate through every suit
+            for (int r = 0; r < 13; r++) { //iterate through every rank
+                Card newCard = new Card(Utility.getRanks()[r], Utility.getSuits()[s]); //generate new card with unique suit or rank
                 cards.add(newCard);
             }
         }
@@ -29,15 +29,15 @@ public class Deck{
     }
 
     public  Card drawCard(){
-        if (cards.size() ==0) {
+        if (cards.size() ==0) { //return null if nothing is there
             return null;
         }
-        return cards.remove(0);
+        return cards.remove(0); //returns the card being removed
     }
 
     public boolean isEmpty(){
         for (int i = 0; i < cards.size(); i++) {
-            if (cards.get(i) != null) {
+            if (cards.get(i) != null) { //if it is not null return true
                 return true;
             }
         }
