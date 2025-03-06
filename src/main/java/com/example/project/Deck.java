@@ -16,7 +16,7 @@ public class Deck{
     }
 
     public  void initializeDeck(){ //hint.. use the utility class
-        for (int s = 0; s < 4; s++) { //iterate through every Suit
+        for (int s = 0; s < 4; s++) { //Iterate through every Suit
             for (int r = 0; r < 13; r++) { //iterate through every rank
                 Card newCard = new Card(Utility.getRanks()[r], Utility.getSuits()[s]); //generate new card with unique suit or rank
                 cards.add(newCard);
