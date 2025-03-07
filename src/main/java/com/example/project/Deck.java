@@ -25,7 +25,7 @@ public class Deck{
     }
 
     public  void shuffleDeck(){ //You can use the Collections library or another method. You do not have to create your own shuffle algorithm
-        Collections.shuffle(cards);
+        Collections.shuffle(cards); //i got this method from https://www.geeksforgeeks.org/collections-shuffle-method-in-java-with-examples/
     }
 
     public  Card drawCard(){
